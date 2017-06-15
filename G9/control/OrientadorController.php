@@ -2,10 +2,11 @@
 
 include_once('model/Orientador.php');
 include_once ('model/Avaliacao.php');
+class OrientadorController
 {
     // =========================Variables Declaration=========================
-    Orientador: $orientador;
-    Avaliacao: $avaliacao;
+    private $orientador;
+    private $avaliacao;
     
     // =========================Constructor=========================
     function __construct($orientador, $avaliacao) {

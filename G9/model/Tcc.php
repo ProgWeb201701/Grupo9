@@ -1,17 +1,18 @@
 <?php
+include_once ('model/Avaliacao.php');
 
-class Tcc
+class Tcc extends ActiveRecord
 {
+   
 	private $titulo;
 	private $proposta;
 	private $dataDefesa;
+        private Avaliacao : $Avaliacao;
 
 
-	public function __construct($titulo, $proposta, $dataDefesa){
+	public function __construct(){
 
-		$this->titulo = $titulo;
-		$this->proposta = $proposta;
-		$this->dataDefesa=$dataDefesa;
+
 	}
 
 	public function setTitulo($titulo){
@@ -23,6 +24,7 @@ class Tcc
 	public function setDataDefesa($dataDefesa){
 		$this->dataDefesa = $dataDefesa;
 	}
+
 
 	public function getTitulo(){
 		return $this->titulo;
