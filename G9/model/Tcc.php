@@ -5,7 +5,7 @@ class Tcc
 	private $titulo;
 	private $proposta;
 	private $dataDefesa;
-}
+
 
 	public function __construct($titulo, $proposta, $dataDefesa){
 
@@ -33,4 +33,5 @@ class Tcc
 	public function getDataDefesa(){
 		return $this->dataDefesa;
 	}
+}
 ?>

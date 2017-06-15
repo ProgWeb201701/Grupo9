@@ -1,9 +1,11 @@
 <?php
 
+include_once 'model/Orientando.php';
+
 class Orientador extends Professor
 {
-	private $orientando;
-}
+    private $orientando;
+
 
 	public function __construct($nome, $titulacao, $instituicao, $orientando){
 		parent::__construct();
@@ -11,9 +13,10 @@ class Orientador extends Professor
 	}
 
 	public function setOrientando($orientando){
-		$this->nome = $nome;
+		$this->orientando = $orientando;
 	}
 	public function getOrientando(){
 		return $this->orientando;
 	}
+}
 ?>

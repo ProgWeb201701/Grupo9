@@ -3,7 +3,7 @@
 class AreaInteresse
 {
 	private $nome;
-}
+
 
 	public function __construct($nome){
 		$this->nome = $nome;
@@ -16,4 +16,5 @@ class AreaInteresse
 	public function getNome(){
 		return $this->nome;
 	}
+}
 ?>

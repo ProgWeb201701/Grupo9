@@ -6,9 +6,9 @@
  	private $nome;
  	private $curso;
  	private $matricula;
- 	}
+ 	
 
- 	public function __construct($nome, $curso, $matricula)
+    public function __construct($nome, $curso, $matricula)
     {
         $this->nome = $nome;
         $this->curso = $curso;
@@ -37,6 +37,7 @@
     public function getMatricula(){
     	return $this->matricula;
     }
+        }
 
 
  ?>

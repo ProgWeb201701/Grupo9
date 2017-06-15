@@ -5,7 +5,6 @@ class Avaliacao
 	private $nota;
 	private $parecer;
 	private $arquivo;
-}
 
 	public function __construct($nota, $parecer, $arquivo){
 
@@ -33,4 +32,5 @@ class Avaliacao
 	public function getArquivo(){
 		return $this->arquivo;
 	}
+}
 ?>

@@ -5,7 +5,6 @@ class Professor
 	private $nome;
 	private $titulacao;
 	private $instituicao;
-}
 
 	public function __construct($nome, $titulacao, $instituicao){
 
@@ -33,4 +32,5 @@ class Professor
 	public function getInstituicao(){
 		return $this->instituicao;
 	}
+}
 ?>

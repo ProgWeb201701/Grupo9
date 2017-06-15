@@ -1,12 +1,17 @@
 <?php
 
-class CoordenadorTcc extends Professor
+class CoordenadorTcc
 {
 
-}
+        private $nome;
+        private $titulacao;
+        private $instituicao;
+
 
 	public function __construct($nome, $titulacao, $instituicao){
-		parent::__construct();
+		$this->nome=$nome;
+                $this->titulacao=$titulacao;
+                $this->instituicao=$instituicao;
 
 	}
 
@@ -29,4 +34,5 @@ class CoordenadorTcc extends Professor
 	public function getInstituicao(){
 		return $this->instituicao;
 	}
+}
 ?>
