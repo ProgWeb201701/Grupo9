@@ -1,13 +1,13 @@
 <?php
  	
- 	class Orientando
- 	{
-
+ class Orientando implements IActiveRecord
+ {
+	// =========================Variables Declaration========================= 
  	private $nome;
  	private $curso;
  	private $matricula;
  	
-
+	// =========================Constructor=========================
     public function __construct($nome, $curso, $matricula)
     {
         $this->nome = $nome;
@@ -15,6 +15,7 @@
         $this->matricula = $matricula;
     }
 
+    	// =========================Sets=========================
     public function setNome($nome)
     {
     	$this->nome = $nome;
@@ -28,6 +29,7 @@
     	$this->matricula=$matricula;
     }
 
+    	// =========================Gets=========================
     public function getNome(){
     	return $this->nome;
     }
@@ -37,7 +39,20 @@
     public function getMatricula(){
     	return $this->matricula;
     }
-        }
+
+    public function delete() {
+        
+    }
+
+    public function save() {
+        
+    }
+
+    public function update() {
+        
+    }
+
+}
 
 
  ?>

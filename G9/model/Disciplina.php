@@ -1,5 +1,5 @@
 <?php
-class Disciplina
+class Disciplina implements IActiveRecord
 {
 	// =========================Variables Declaration=========================    
 	private $nome;
@@ -8,12 +8,8 @@ class Disciplina
 	private $Coordenador;
 
 	// =========================Constructor=========================
-	public function __construct($nome, $turma, $semestre, $Coordenador)
+	public function __construct()
 	{
-		$this->$nome = $nome;
-		$this->$turma = $turma;
-		$this->$semestre = $semestre;
-		$this->$Coordenador = $Coordenador;
 	}
 
     // =========================Sets=========================
@@ -52,9 +48,27 @@ class Disciplina
     {
     	return $this->Coordenador;
     }
-
-
     // =========================Functions=========================
+
+    public function delete() {
+        
+    }
+
+    public function save() {
+        $con = DBConnection::open();
+        $con->stmt_init();
+        $stmt = $con->prepare('INSERT INTO disciplina(nomdis, turdis, semdis, codcoo, codtcc) values(?, ?, ?, ?)');
+        $stmt->bind_param($this->nome, $this->turma, $this->semestre, $this->Coordenador);
+        $stmt->execute();
+        $con->close();
+    }
+
+
+    public function update() {
+        
+    }
+
+    
 }
 
 
