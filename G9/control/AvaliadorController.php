@@ -1,24 +1,24 @@
 <?php
 
-include_once('model/Orientador.php');
+include_once('model/Tcc.php');
 include_once ('model/Avaliacao.php');
 class AvaliadorController
 {
     // =========================Variables Declaration=========================
     private $avaliador;
-    private $avaliacao;
     private $tcc;
+    private $avaliacao;
     
     // =========================Constructor=========================
-    function __construct($orientador, $avaliacao, $tcc) {
-        $this->orientador = $orientador;
-        $this->avalicao = $avaliacao;
+    function __construct($avaliador) {
+        $this->avaliador = $avaliador;
         $this->tcc = $tcc;
     }
 
     // =========================Sets=========================
-    function setOrientador($orientador) {
-        $this->orientador = $orientador;
+    function setAvaliador($avaliador)
+    {
+        $this->avaliador = $avaliador;
     }
 
     function setAvaliacao($avaliacao) {
@@ -30,9 +30,7 @@ class AvaliadorController
     }
 
     // =========================Gets=========================
-    function getOrientador() {
-        return $this->orientador;
-    }
+
 
     function getAvaliacao() {
         return $this->avaliacao;
@@ -41,12 +39,14 @@ class AvaliadorController
     function getTcc(){
         return $this->tcc;
     }
+    function getAvaliador(){
+        return $this->avaliador;
+    }
     // =========================Public Functions=========================
 
-    //function pesquisarCliente() {   }
  
-   function AvaliarTCC($tcc){
-       
+   function AvaliarTCC($nota){
+       $this->Avaliacao.setNota($nota);
    }
 
 

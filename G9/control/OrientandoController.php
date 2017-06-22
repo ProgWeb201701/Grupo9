@@ -34,7 +34,9 @@ include_once('model/Orientando.php');
         $this->orientando->setMat($mat);
 
         
-        //$this->clienteSelecionado->update();//bd
+    }
+    function submeterMonografia($monografia){
+        
     }
 }
 
