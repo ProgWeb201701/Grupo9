@@ -1,13 +1,13 @@
 <?php
 include_once ('model/Avaliacao.php');
 
-class Tcc extends ActiveRecord
+class Tcc implements ActiveRecord
 {
    
 	private $titulo;
 	private $proposta;
 	private $dataDefesa;
-        private Avaliacao : $Avaliacao;
+        private $Avaliacao;
 
 
 	public function __construct(){

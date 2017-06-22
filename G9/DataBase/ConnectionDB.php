@@ -9,8 +9,8 @@ final class DBConnection
     {
         $hostDB = "localhost";
         $usuarioDB = "root";
-        $senhaDB = "teste";
-        $nomeDB = "rp3";
+        $senhaDB = "";
+        $nomeDB = "trabtcc";
         $connection = new mysqli($hostDB, $usuarioDB, $senhaDB, $nomeDB);
 
         return $connection;
