@@ -1,10 +1,11 @@
 <?php
 
 include_once('model/Professor.php');
-
+class ProfessorController
 {
     // =========================Variables Declaration=========================
-    Professor: $professor;
+    private $professor;
+    private $areaInteresse;
 
     // =========================Constructor=========================
     function __construct($professor) {
@@ -15,6 +16,7 @@ include_once('model/Professor.php');
     function setProfessor($professor) {
         $this->professor = $professor;
     }
+    
     // =========================Gets=========================
     function getProfessor() {
         return $this->professor;
@@ -30,12 +32,16 @@ include_once('model/Professor.php');
         $instituicao = $_POST["instituicao"];
 
 
-        $professor->setNome($nome);
-        $professor->setInstituicao($instituicao);
-        $professor->setTitulacao($titulacao);
+        $this->professor->setNome($nome);
+        $this->professor->setInstituicao($instituicao);
+        $this->professor->setTitulacao($titulacao);
         
-        //$this->clienteSelecionado->update();//bd
     }
+    function associarAreaInteresse($areaInteresse)
+    {
+        $this->professor.setAreaI($areaInteresse);
+    }
+   
 
  }
 
