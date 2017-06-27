@@ -13,7 +13,11 @@ final class DBConnection
         $nomeDB = "trabtcc";
         $connection = new mysqli($hostDB, $usuarioDB, $senhaDB, $nomeDB);
 
-        return $connection;
+      if ($connection->connect_error) {
+            die("Erro na conexão com o banco de dados: " . $connection->connect_error);
+        } else {
+            return $connection;
+        }
     }
 
 }
