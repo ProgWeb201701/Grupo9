@@ -7,8 +7,9 @@ class Professor implements IActiveRecord
 	private $titulacao;
 	private $instituicao;
         private $avaliador;
-        private $id;
+        private $matricula;
         private $areai;
+        private $nivel;
 
         	// =========================Constructor=========================
 	public function __construct($nome, $titulacao, $instituicao, $id, $areai){
@@ -18,6 +19,7 @@ class Professor implements IActiveRecord
 		$this->instituicao=$instituicao;
                 $this->id=$id;
                 $this->areai=$areai;
+                $this->nivel = 2;
 	}
 
         	// =========================Sets=========================

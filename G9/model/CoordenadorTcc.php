@@ -7,10 +7,14 @@ class CoordenadorTcc implements IActiveRecord
         private $titulacao;
         private $instituicao;
         private $id;
+        private $nivel;
 
 	// =========================Constructor=========================
-	public function __construct(){
-
+	public function __construct($nome, $titulacao, $instituicao, $nivel){
+            $this->nome = $nome;
+            $this->titulacao = $titulacao;
+            $this->instituicao = $instituicao;
+            $this->nivel = 5;
 
 	}
 

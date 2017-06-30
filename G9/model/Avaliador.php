@@ -3,12 +3,13 @@ Class Avaliador
 {
 	// =========================Variables Declaration========================= 
 	private $Avaliacao;
-
+        private $nivel;
 	// =========================Constructor=========================
 	public function __construct($nome, $titulacao, $instituicao, $Avaliacao)
 	{
 		parent::__construct();
 		$this->Avaliacao = $Avaliacao;
+                $this->nivel = 4;
 	}
 
 	// =========================Sets=========================

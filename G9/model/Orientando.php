@@ -6,6 +6,7 @@
  	private $nome;
  	private $curso;
  	private $matricula;
+        private $nivel;
  	
 	// =========================Constructor=========================
     public function __construct($nome, $curso, $matricula)
@@ -13,6 +14,7 @@
         $this->nome = $nome;
         $this->curso = $curso;
         $this->matricula = $matricula;
+        $this->nivel = 1;
     }
 
     	// =========================Sets=========================
