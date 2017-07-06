@@ -7,6 +7,7 @@
  	private $curso;
  	private $matricula;
         private $nivel;
+        
  	
 	// =========================Constructor=========================
     public function __construct($nome, $curso, $matricula)

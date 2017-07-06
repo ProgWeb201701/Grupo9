@@ -32,7 +32,7 @@
     </ul>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="../../logout.php">Sair</a>
+                <a class="nav-link" href="index.php">Sair</a>
             </li>
         </ul>
   </div>
@@ -49,8 +49,8 @@
             echo "<div class='row'><div class='col-md-12'><h4>Bem Vindo!</h4></div></div>";
         }else if($pagina == "homealuno"){
             include("homealuno.html");
-        }else if($pagina == "operador_ligacoes"){
-            include("operador_ligacoes.php");
+        }else if($pagina == "alunoedita"){
+            include("edcadastroaluno.php");
         }else{
             echo "<div class='row'><div class='col-md-12'><h4>Página não encontrada!</h4></div></div>";
         }

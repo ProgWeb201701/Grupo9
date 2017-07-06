@@ -10,9 +10,11 @@ class Professor implements IActiveRecord
         private $matricula;
         private $areai;
         private $nivel;
+        private $senha;
+        private $id;
 
         	// =========================Constructor=========================
-	public function __construct($nome, $titulacao, $instituicao, $id, $areai){
+	public function __construct($nome, $titulacao, $instituicao, $id, $areai, $senha){
 
 		$this->nome = $nome;
 		$this->titulacao = $titulacao;
@@ -20,6 +22,7 @@ class Professor implements IActiveRecord
                 $this->id=$id;
                 $this->areai=$areai;
                 $this->nivel = 2;
+                $this->senha = $senha;
 	}
 
         	// =========================Sets=========================
