@@ -41,6 +41,7 @@
             $_SESSION['senha'] = $_POST['senha'];
             echo "<center>Logado como aluno!</center>";
             echo "<script>loginsucesso()</script>";
+ 
             
             
         } else if($resultprof > 0){
