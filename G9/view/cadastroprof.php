@@ -10,10 +10,14 @@
 
 <div class="container">
   <h2>Cadastrar Aluno</h2>
-  <form name ="signup" method="POST" action="cadastrando.php">
+  <form name ="signup" method="POST" action="cadastrandoprof.php">
     <div class="form-group">
       <label for="nome">Nome:</label>
       <input type="text" class="form-control" id="nome" name="nome">
+    </div>
+          <div class="form-group">
+      <label for="mat">Matricula:</label>
+      <input type="number" class="form-control" id="mat" name="mat">
     </div>
       <div class="form-group">
         <label for="senha">Senha:</label>
@@ -24,7 +28,7 @@
       <input type="text" class="form-control" id="tit" name="tit">
     </div>
           <div class="form-group">
-      <label for="matricula">Instituição:</label>
+      <label for="inst">Instituição:</label>
       <input type="text" class="form-control" id="inst" name="inst">
     </div>
 

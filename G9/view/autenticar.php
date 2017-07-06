@@ -23,17 +23,17 @@
         $mat = $_POST['mat'];
 
         $con = DBConnection::open();
-        $sql = "SELECT * FROM usuarios where mat='$mat' and senha='$senha'";
+        $sql = "SELECT * FROM orientando where matori='$mat' and senhaori='$senha'";
         $query = $con->query($sql);
-        $con->close();
         $resultaluno = $query->num_rows;
+        $con->close();
 
 
        $con = DBConnection::open();
-       $sql2 = "SELECT * FROM usuariosprof where mat='$matricula' and senha='$senha'";
+       $sql2 = "SELECT * FROM professor where matprof='$mat' and senhaprof='$senha'";
        $query2 = $con->query($sql2);
-        $con->close();
        $resultprof = $query2->num_rows;
+        $con->close();
         
         if ($resultaluno > 0) {
             session_start();
@@ -41,7 +41,14 @@
             $_SESSION['senha'] = $_POST['senha'];
             echo "<center>Logado como aluno!</center>";
             echo "<script>loginsucesso()</script>";
+            
+            
         } else if($resultprof > 0){
+            session_start();
+            $_SESSION['mat'] = $_POST['mat'];
+            $_SESSION['senha'] = $_POST['senha'];
+            echo "<center>Logado como Professor!</center>";
+            echo "<script>loginsucesso1()</script>";
             
         }
        else {
