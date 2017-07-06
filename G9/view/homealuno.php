@@ -27,8 +27,9 @@
         <a class="nav-link" href="?pagina=alunoedita">Editar Cadastro</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?pagina=operador_ligacoes">Submeter Monografia</a>
+        <a class="nav-link" href="?pagina=mono">Submeter Monografia</a>
       </li>
+      
     </ul>
         <ul class="nav justify-content-end">
             <li class="nav-item">
@@ -51,6 +52,8 @@
             include("homealuno.html");
         }else if($pagina == "alunoedita"){
             include("edcadastroaluno.php");
+        }else if($pagina == "mono"){
+            include("submissaoMono.php");
         }else{
             echo "<div class='row'><div class='col-md-12'><h4>Página não encontrada!</h4></div></div>";
         }

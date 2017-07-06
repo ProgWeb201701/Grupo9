@@ -34,6 +34,9 @@ class user{
       <li class="nav-item">
         <a class="nav-link" href="?pagina=areai">Área de interesse</a>
       </li>
+            <li class="nav-item">
+        <a class="nav-link" href="?pagina=tcc">TCC's</a>
+      </li>
     </ul>
         <ul class="nav justify-content-end">
             <li class="nav-item">
@@ -59,6 +62,9 @@ class user{
             include("edcadastroprof.php");
         }else if($pagina == "areai"){
             include("areai.php");
+        }
+        else if($pagina == "tcc"){
+            include("tabhora.php");
         }else{
             echo "<div class='row'><div class='col-md-12'><h4>Página não encontrada!</h4></div></div>";
         }
