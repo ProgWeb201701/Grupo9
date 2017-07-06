@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Jun-2017 às 01:01
+-- Generation Time: 02-Jul-2017 às 03:24
 -- Versão do servidor: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -39,8 +39,8 @@ CREATE TABLE `areainteresse` (
 
 CREATE TABLE `avaliacao` (
   `codava` bigint(20) UNSIGNED NOT NULL,
-  `notava` int(50) DEFAULT NULL,
-  `parava` varchar(100) DEFAULT NULL,
+  `notava` decimal(2,2) DEFAULT NULL,
+  `parava` text,
   `arqava` varchar(100) DEFAULT NULL,
   `codavar` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -69,6 +69,13 @@ CREATE TABLE `coordenadortcc` (
   `inscoo` varchar(100) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `coordenadortcc`
+--
+
+INSERT INTO `coordenadortcc` (`codcoo`, `nomcoo`, `titcoo`, `inscoo`) VALUES
+(1, 'adalberto', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -82,6 +89,18 @@ CREATE TABLE `disciplina` (
   `semdis` int(50) DEFAULT NULL,
   `codcoo` int(11) DEFAULT NULL,
   `codtcc` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `monografia`
+--
+
+CREATE TABLE `monografia` (
+  `codmono` int(11) NOT NULL,
+  `arquivo` varchar(40) DEFAULT NULL,
+  `datamono` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -109,6 +128,14 @@ CREATE TABLE `orientando` (
   `codorir` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `orientando`
+--
+
+INSERT INTO `orientando` (`codori`, `nomori`, `curori`, `matori`, `codorir`) VALUES
+(1, 'gilberto', 'es', 1615, NULL),
+(2, 'mayla', 'cc', 1966, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -122,6 +149,13 @@ CREATE TABLE `professor` (
   `instprof` varchar(100) DEFAULT NULL,
   `codareai` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `professor`
+--
+
+INSERT INTO `professor` (`codprof`, `nomprof`, `titprof`, `instprof`, `codareai`) VALUES
+(1, 'luis', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -138,6 +172,13 @@ CREATE TABLE `tcc` (
   `codori` int(11) DEFAULT NULL,
   `coddis` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tcc`
+--
+
+INSERT INTO `tcc` (`codtcc`, `tittcc`, `protcc`, `dtdeftcc`, `codava`, `codori`, `coddis`) VALUES
+(1, 'tcc do gilberto', NULL, '2017-09-01', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -179,6 +220,12 @@ ALTER TABLE `disciplina`
   ADD UNIQUE KEY `coddis` (`coddis`);
 
 --
+-- Indexes for table `monografia`
+--
+ALTER TABLE `monografia`
+  ADD PRIMARY KEY (`codmono`);
+
+--
 -- Indexes for table `orientador`
 --
 ALTER TABLE `orientador`
@@ -214,7 +261,7 @@ ALTER TABLE `tcc`
 -- AUTO_INCREMENT for table `areainteresse`
 --
 ALTER TABLE `areainteresse`
-  MODIFY `codareai` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `codareai` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `avaliacao`
 --
@@ -229,12 +276,17 @@ ALTER TABLE `avaliador`
 -- AUTO_INCREMENT for table `coordenadortcc`
 --
 ALTER TABLE `coordenadortcc`
-  MODIFY `codcoo` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `codcoo` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `disciplina`
 --
 ALTER TABLE `disciplina`
   MODIFY `coddis` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `monografia`
+--
+ALTER TABLE `monografia`
+  MODIFY `codmono` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `orientador`
 --
@@ -244,17 +296,17 @@ ALTER TABLE `orientador`
 -- AUTO_INCREMENT for table `orientando`
 --
 ALTER TABLE `orientando`
-  MODIFY `codori` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `codori` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `professor`
 --
 ALTER TABLE `professor`
-  MODIFY `codprof` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `codprof` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tcc`
 --
 ALTER TABLE `tcc`
-  MODIFY `codtcc` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `codtcc` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
