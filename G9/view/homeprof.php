@@ -37,7 +37,7 @@ class user{
     </ul>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="../../logout.php">Sair</a>
+                <a class="nav-link" href="index.php">Sair</a>
             </li>
         </ul>
   </div>
@@ -56,7 +56,7 @@ class user{
                     . "<h4>Bem Vindo!</h4>"
                     . "</div></div>";
         }else if($pagina == "profedita"){
-            include("profedita.php");
+            include("edcadastroprof.php");
         }else if($pagina == "areai"){
             include("areai.php");
         }else{
